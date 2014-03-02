@@ -1,0 +1,74 @@
+/* CSS declarations go here */
+
+@font-face {
+    font-family: 'outageregular';
+    src: url('outage-webfont.eot');
+    src: url('outage-webfont.eot?#iefix') format('embedded-opentype'),
+         url('outage-webfont.woff') format('woff'),
+         url('outage-webfont.ttf') format('truetype'),
+         url('outage-webfont.svg#outageregular') format('svg');
+}
+
+body {
+    font-family: 'outageregular';
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #01173A;
+    background-image: url(space.png);
+}
+
+#logo {
+  margin: 0 auto;
+  display: block;
+}
+
+#board {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+}
+
+.player {
+    width: 10px;
+    height: 50px;
+    background-color: white;
+}
+
+#player1 {
+    position: absolute;
+    top: 350px;
+}
+
+#player2 {
+    position: absolute;
+    top: 350px;
+    right: 0px;
+}
+.ball{ 
+  position:absolute;
+  width:14px;
+  height:14px;
+  background:#fff;
+  top:350px;
+  right:50%;
+  margin-left:-7px;
+
+}
+.score{ 
+  margin:0px auto 5px;
+  text-align:center;
+}
+.controllers {
+  z-index: 100000;
+  position: relative;
+  top: 520px;
+}
+
+#spaceballs{ 
+  width:600px;
+  overflow:hidden;
+  margin:auto;
+  display:none;
+  z-index:10;
+}

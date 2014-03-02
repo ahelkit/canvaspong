@@ -1,0 +1,32 @@
+<head>
+  <title>pong</title>
+  <script>
+		function draw() {
+		  var fontName = 'outageregular';
+		  var canvas = document.getElementById(fontName);
+		  var ctx = canvas.getContext('2d');
+		  ctx.font = '14pt ' + fontName + ', "Courier New"';
+		  ctx.fillStyle = 'rgba(0, 0, 0, 1)';
+		  ctx.fillText(fontName, 10, 25);
+		}
+	</script>
+</head>
+
+<body>
+  {{> hello}}
+  {{> hidden}}
+</body>
+
+<template name="hello">
+<img id="logo" src="spacepong_logo.png"/>
+{{#constant}}
+<canvas id="canvas"></canvas>
+{{/constant}}
+</template>
+
+<template name="hidden">
+{{#each controllers}}
+</br><span>{{name}} :: roll: {{roll}}, pitch: {{pitch}}, yaw: {{yaw}}</span>
+{{/each}}
+</template>
+
