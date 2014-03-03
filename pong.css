@@ -15,11 +15,18 @@ body {
     margin: 0;
     overflow: hidden;
     background: #01173A;
-    background-image: url(space.png);
+}
+
+#canvas {
+  background-image: url(space.png);
 }
 
 #logo {
-  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  /* this image is 455px */
+  margin-left: -227px;
   display: block;
 }
 
@@ -45,7 +52,8 @@ body {
     top: 350px;
     right: 0px;
 }
-.ball{ 
+
+.ball{
   position:absolute;
   width:14px;
   height:14px;
@@ -55,17 +63,14 @@ body {
   margin-left:-7px;
 
 }
-.score{ 
-  margin:0px auto 5px;
-  text-align:center;
-}
+
 .controllers {
   z-index: 100000;
   position: relative;
   top: 520px;
 }
 
-#spaceballs{ 
+#spaceballs{
   width:600px;
   overflow:hidden;
   margin:auto;

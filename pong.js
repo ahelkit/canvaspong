@@ -74,11 +74,6 @@ if (Meteor.isClient) {
     canvas.width = W;
     canvas.height = H;
 
-    function paintCanvas() {
-      ctx.fillStyle = "transparent";
-      ctx.fillRect(0, 0, W, H);
-    }
-
     function trackPosition(e) {
       mouse.x = e.pageX;
       mouse.y = e.pageY;
@@ -174,7 +169,7 @@ if (Meteor.isClient) {
     }
 
     function countDown(number) {
-      draw();
+      ctx.clearRect(0, 0, W, H);
       ctx.fillStlye = "#efebd1";
       ctx.font = "124px 'outageregular', sans-serif";
       ctx.textAlign = "center";
@@ -187,7 +182,7 @@ if (Meteor.isClient) {
       ctx.font = "48px 'outageregular', sans-serif";
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
-      ctx.fillText(paddleLeft.score + " - " + paddleRight.score, canvas.width/2, 20 );
+      ctx.fillText(paddleLeft.score + " - " + paddleRight.score, canvas.width/2, 100);
     }
 
     function updateReadyState(controller, side) {
@@ -231,7 +226,7 @@ if (Meteor.isClient) {
     }
 
     function draw() {
-      paintCanvas();
+      ctx.clearRect(0, 0, W, H);
       for(var i = 0; i < paddles.length; i++) {
         p = paddles[i];
         ctx.fillStyle = "#efebd1";
